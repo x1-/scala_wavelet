@@ -3,8 +3,8 @@
   <component name="FacetManager">
     <facet type="scala" name="Scala">
       <configuration>
-        <option name="compilerLibraryLevel" value="Project" />
-        <option name="compilerLibraryName" value="scala-2.9.1" />
+        <option name="compilerLibraryLevel" value="Global" />
+        <option name="compilerLibraryName" value="scala-bundle" />
         <option name="fsc" value="true" />
       </configuration>
     </facet>
@@ -24,9 +24,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="org.scala-lang_scala-library_2.9.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="org.specs2_specs2_2.9.1_1.12.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="org.specs2_specs2-scalaz-core_2.9.1_6.0.1" level="project" />
+    <orderEntry type="library" name="scala-bundle" level="application" />
+    <orderEntry type="library" name="logback-1.0.13" level="project" />
+    <orderEntry type="library" name="spray-can-1.2-M8" level="project" />
+    <orderEntry type="library" name="akka_2.10-2.2.0-RC1" level="project" />
+    <orderEntry type="library" name="mimepull-1.9.3" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.7.5" level="project" />
+    <orderEntry type="library" name="basho-riak-client" level="project" />
+    <orderEntry type="library" name="config-1.0.2" level="project" />
   </component>
 </module>
 
