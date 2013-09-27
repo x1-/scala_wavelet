@@ -75,16 +75,18 @@ class WebService extends Actor with ActorLogging {
         + "</tr>"
       )
 
+    val html =
+    <html>
+      <body>
+        <h2>Wavelet Matrix Index Generated!</h2>
+        <table>__rows__
+        </table>
+      </body>
+    </html>.toString()
+
     HttpResponse(
-      entity = HttpEntity(`text/html`,
-        <html>
-          <body>
-            <h2>Wavelet Matrix Index Generated!</h2>
-            <table>
-              els.mkString
-            </table>
-          </body>
-        </html>.toString()
+      entity = HttpEntity(`text/html`
+        ,html.replaceFirst( "__rows__", els.mkString )
       )
     )
   }
