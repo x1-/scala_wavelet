@@ -7,6 +7,16 @@ version := "0.0.1"
 scalaVersion := "2.10.2"
 //scalaVersion := "2.9.1"
 
+javaOptions ++= Seq(
+   "-Xms512m"
+  ,"-Xmx1024m"
+  ,"-Xss1m"
+  ,"-XX:MaxPermSize=256m"
+  ,"-XX:ReservedCodeCacheSize=60m"
+  ,"-XX:+CMSClassUnloadingEnabled"
+  ,"-XX:-UseGCOverheadLimit"
+)
+
 libraryDependencies ++= Seq(
 //   "org.specs2"                    %  "specs2_2.10"            % "2.2"
    "ch.qos.logback"                 %  "logback-core"           % "latest.integration"

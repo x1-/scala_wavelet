@@ -13,17 +13,27 @@ import scala.collection.mutable
  */
 class WaveletMatrix( _length: Int ) {
 
-  val _data : Array[WaveletRow] = new Array( _length );
+  val _data : Array[WaveletRow] = new Array( _length )
+  var _indexMap : Map[Int, Int] = Map()
 
   def length : Int = _length
   def get( index: Int ) : WaveletRow = _data( index )
+  def last : WaveletRow = _data.last
+  def getAllStart = _indexMap
+  def getStart( index: Int ) = _indexMap( index )
 
   def update( index: Int, row: WaveletRow ) = {
     _data( index ) = row
   }
 
+  def updateIndex( key: Int, start: Int ) = {
+    _indexMap += key -> start
+  }
+
   case class WaveletRow(
      bitLevel : Int
     ,vector : mutable.BitSet
+    ,size: Int
+    ,zero : Int
   )
 }
